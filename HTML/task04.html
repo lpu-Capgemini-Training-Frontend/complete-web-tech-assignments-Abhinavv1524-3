@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>applicant Form</title>
+  </head>
+  <body>
+    <h2>Applicant Details</h2>
+
+    <form action="#" method="post">
+      <label>First Name:</label>
+      <input type="text" name="fname" /><br /><br />
+
+      <label>Last Name:</label>
+      <input type="text" name="lname" /><br /><br />
+
+      <label>Email:</label>
+      <input type="email" name="email" /><br /><br />
+
+      <label>Gender:</label><br />
+      <input type="radio" name="gender" value="male" /> Male<br />
+      <input type="radio" name="gender" value="female" /> Female<br /><br />
+
+      <label>Contact:</label>
+      <input type="text" name="contact" /><br /><br />
+
+      <label>Qualification:</label>
+      <input type="file" name="qualification" /><br /><br />
+
+      <label>Joining Date:</label>
+      <input type="date" name="date" /><br /><br />
+
+      <label>Skills:</label><br />
+      <input type="checkbox" name="skill" value="js" /> JavaScript<br />
+      <input type="checkbox" name="skill" value="java" /> Java<br />
+      <input type="checkbox" name="skill" value="react" /> React<br />
+      <input type="checkbox" name="skill" value="express" /> Express<br />
+      <input type="checkbox" name="skill" value="python" /> Python<br />
+      <input type="checkbox" name="skill" value="sql" /> SQL<br /><br />
+
+      <label>Years of Experience:</label>
+      <input type="range" name="exp" min="0" max="10" /><br /><br />
+
+      <label>Work Location:</label>
+      <select name="location">
+        <option>Chandigarh</option>
+        <option>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bangalore</option></select
+      ><br /><br />
+
+      <label>Address:</label><br />
+      <textarea name="address" rows="4" cols="30"></textarea><br /><br />
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
