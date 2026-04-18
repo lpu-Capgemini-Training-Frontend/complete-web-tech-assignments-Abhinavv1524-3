@@ -1,0 +1,6 @@
+Question - 
+Create an interface Customer with id, name, address, email, phone, dateOfBirth, gender.
+
+create a component CustomerList that has list of customer. spwan the customer-details component for each customer where in each page not more than 5 cusotmers are shown. create two buttons previous and next for traversing the customer list with pagination. make sure that the previous buttion is disabled when user on the first page and next button is disabled when user on the last page.
+
+Create an input textbox for user input where the user can enter the name he wants to search. on entering the data in seachbox, only customers are shown that have the given word in name eg if word is "deep" then customer with sample names "deepdas", "deepak", "raj deepak" etc will be shown
