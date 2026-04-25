@@ -1,0 +1,8 @@
+.customer-card {
+  background-color: antiquewhite;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 230px;
+  margin: 5px 10px;
+}

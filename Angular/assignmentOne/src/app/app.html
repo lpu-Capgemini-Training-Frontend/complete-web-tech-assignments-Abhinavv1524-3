@@ -1,0 +1,23 @@
+<h1>Welcome to Angular Assignment One!</h1>
+<!-- @for (customer of customerList; track customer.id) {
+  <app-customer-details [customerObj]="customer"></app-customer-details>
+} -->
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchItem"
+    (input)="onSearchChange()"
+    placeholder="Search by name..."
+  />
+</div>
+
+<div class="customer-container">
+  @for (customer of filteredCustomerList.slice(startIndex, endIndex); track customer.id) {
+    <app-customer-details [customerObj]="customer"></app-customer-details>
+  }
+</div>
+<div class="buttons">
+  <button (click)="previousPage()" [disabled]="startIndex === 0">Previous</button>
+  <button (click)="nextPage()" [disabled]="endIndex >= filteredCustomerList.length">Next</button>
+</div>
+<router-outlet />

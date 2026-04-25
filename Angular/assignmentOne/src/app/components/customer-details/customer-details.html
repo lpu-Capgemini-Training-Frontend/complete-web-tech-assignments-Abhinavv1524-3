@@ -1,0 +1,10 @@
+<div class="customer-container">
+  <div class="customer-card">
+    <h2>{{ customerObj.name }}</h2>
+    <p><strong>Address:</strong> {{ customerObj.address }}</p>
+    <p><strong>Email:</strong> {{ customerObj.email }}</p>
+    <p><strong>Phone:</strong> {{ customerObj.phone }}</p>
+    <p><strong>Date of Birth:</strong> {{ customerObj.dateOfBirth | date: 'd/M/y' }}</p>
+    <p><strong>Gender:</strong> {{ customerObj.gender }}</p>
+  </div>
+</div>

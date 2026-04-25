@@ -1,0 +1,11 @@
+Consider a training program portal where there are two types of users "manager" and "trainee".
+
+new Trainings with feilds training title, topic , maxtrainees, startdate, end date, trainername, venue can be added only by manager. add button to disable till the time requiredentries are not filled.
+
+the trainer can see upcoming Trainings
+
+create a template driven form for adding the training. Also create a component to view the list of trainings upcoming.
+
+current scope: you have to use routing in angular.
+
+Login and checking for user for restricting the trainee to add new training can be done if time permits.
