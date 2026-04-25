@@ -1,0 +1,70 @@
+<p>add-training works!</p>
+
+<div class="container mt-5">
+   @if(service.getRole() === 'trainee' || service.getRole() === '') {
+    <div class="alert alert-danger text-center">
+      <h4>Only Managers can add trainings</h4>
+    </div>
+  }
+  @else {
+  <div class="card shadow-lg p-4">
+    <h3 class="text-center mb-4">Add Training</h3>
+    <form [formGroup]="trainingForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter Title">
+        @if (trainingForm.get('title')?.invalid && trainingForm.get('title')?.touched) {
+          <div class="text-danger small">Title is required</div>
+          @if (trainingForm.get('title')?.errors?.['minlength']) {
+            <div class="text-danger small">Minimum 3 characters required</div>
+          }
+        }
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Topic</label>
+        <input type="text" class="form-control" formControlName="topic" placeholder="Enter Topic">
+        @if (trainingForm.get('topic')?.invalid && trainingForm.get('topic')?.touched) {
+          <div class="text-danger small">Topic is required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Max Trainees</label>
+        <input type="number" class="form-control" formControlName="maxtrainees" placeholder="Enter number">
+        @if (trainingForm.get('maxtrainees')?.invalid && trainingForm.get('maxtrainees')?.touched) {
+          <div class="text-danger small">Enter max trainees</div>
+        }
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Start Date</label>
+          <input type="date" class="form-control" formControlName="startdate">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">End Date</label>
+          <input type="date" class="form-control" formControlName="enddate">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Trainer Name</label>
+        <input type="text" class="form-control" formControlName="trainername" placeholder="Enter Trainer Name">
+        @if (trainingForm.get('trainername')?.invalid && trainingForm.get('trainername')?.touched) {
+          <div class="text-danger small">Trainer name required</div>
+        }
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Venue</label>
+        <input type="text" class="form-control" formControlName="venue" placeholder="Enter Venue">
+        @if (trainingForm.get('venue')?.invalid && trainingForm.get('venue')?.touched) {
+          <div class="text-danger small">Venue required</div>
+        }
+      </div>
+      @if (service.getRole() === 'manager') {
+        <button type="submit" class="btn btn-primary w-100" [disabled]="trainingForm.invalid">
+          Add Training
+        </button>
+      }
+    </form>
+  </div>
+  }
+</div>

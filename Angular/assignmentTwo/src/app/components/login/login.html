@@ -1,0 +1,31 @@
+<p>login works!</p>
+<div class="container d-flex justify-content-center align-items-center vh-30">
+  <div class="card shadow-lg p-4" style="width: 350px; border-radius: 12px;">
+    <h3 class="text-center mb-4">Login</h3>
+
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        [(ngModel)]="username"
+        placeholder="Enter username">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Select Role</label>
+      <select [(ngModel)]="role" class="form-select">
+        <option value="">Select Role</option>
+        <option value="trainee">Trainee</option>
+        <option value="manager">Manager</option>
+      </select>
+    </div>
+
+    <button 
+      class="btn btn-primary w-100"
+      (click)="login()" 
+      [disabled]="!username || !role">
+      Login
+    </button>
+  </div>
+</div>

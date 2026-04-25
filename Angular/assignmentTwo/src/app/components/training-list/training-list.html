@@ -1,0 +1,35 @@
+<p>training-list works!</p>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Upcoming Trainings</h2>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle shadow-sm">
+        <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Topic</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Trainer</th>
+          <th>Venue</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (t of trainings; track t; let i = $index) {
+          <tr>
+            <td>{{i + 1}}</td>
+            <td class="text-primary fw-semibold">{{t.title}}</td>
+            <td>{{t.topic}}</td>
+            <td>{{t.startdate}}</td>
+            <td>{{t.enddate}}</td>
+            <td>{{t.trainername}}</td>
+            <td>{{t.venue}}</td>
+          </tr>
+        }
+      </tbody>
+
+    </table>
+  </div>
+</div>
